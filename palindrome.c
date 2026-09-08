@@ -10,7 +10,7 @@ bool isPalindrome(int x) {
         r=r*10;
         n=a%10;
         a=a/10;
-        r+=n;
+        r=r+n;
     }
     if(x==r){
         return true;
