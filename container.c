@@ -14,3 +14,26 @@ int maxArea(int* height, int heightSize){
 
     return res;
 }
+    
+
+
+
+int maxArea(int* height, int heightSize) {
+    int high=0;
+    int a=heightSize;
+    for(int i=0;i<a/2;i++){
+        for(int j=i+1;j<a;j++){
+            int b;
+            if(*(height+i)<*(height+j)){
+                b=*(height+i);
+            }
+            else{
+                b=*(height+j);
+            }
+            if(high<b*(j-i)){
+                high=b*(j-i);
+            }
+        }
+    }
+    return high;
+}
